@@ -75,4 +75,30 @@ fn main() {
 	for month in months.iter() {
 		println!("{}", month);
 	}
+
+	println!("--- Functions ---");
+	println!("Sum. 5 + 6 : {}", sum(5, 6));
+	println!("Subtraction. 5 - 6 : {}", subtraction(5, 6));
+	println!("Multiply. 5 * 6 : {}", multiply(5, 6));
+	println!("Divide. 5 / 6 : {}", divide(5.0, 6.0));
+}
+
+fn sum(x: i8, y: i8) -> i8 {
+	x + y
+}
+
+fn subtraction(x: i8, y: i8) -> i8 {
+	x - y
+}
+
+fn multiply(x: i8, y: i8) -> i8  {
+	x * y
+}
+
+fn divide(x: f32, y: f32) -> f32 {
+	if y != 0.0 {
+		x / y
+	}else {
+		0.0
+	}
 }
