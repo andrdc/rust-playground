@@ -60,9 +60,19 @@ fn main() {
 	let emoji = '😻';
 	println!("Emoji is a char varbiable: {}", emoji);
 
+	// Tuples are len fixed
 	let numbers: (i16, u8, f32) = (540, 254, 42.42);
 	let (a, b, c) = numbers;
 	println!("Tuple values with variables. a: {}, b: {}, c: {}", a, b, c);
 	println!("Tuple values with tuple indexing. 0: {}, 1: {}, 2: {}",
 			 numbers.0, numbers.1, numbers.2);
+
+	// Arrays are len fixed
+	let months: [&str; 12] = ["January", "February", "March", "April",
+							 "May", "June", "July", "August", "September",
+							 "October", "November", "December"];
+	println!("Print Array with a foor loop");
+	for month in months.iter() {
+		println!("{}", month);
+	}
 }
